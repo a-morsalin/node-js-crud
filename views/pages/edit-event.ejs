@@ -1,0 +1,58 @@
+<% include ../partials/header %>
+
+<div class="" style="margin-right:30px; margin-left:30px;">
+	<div class="col-md-12">
+
+		<form action="http://localhost:4000/event/edit/<%= item[0].e_id %>" method="post">
+		<input type="hidden" name="e_id" value="<%= item[0].e_id %>">
+
+			<div class="form-group row">
+			    <label for="e_name" class="col-2 col-form-label">Name</label>
+			    <div class="col-10">
+			        <input type="text" name="e_name" value="<%= item[0].e_name %>" class="form-control">
+			    </div>
+			</div>
+
+			<div class="form-group row">
+			    <label for="e_start_date" class="col-2 col-form-label">Start Date</label>
+			    <div class="col-10">
+			        <input type="date" name="e_start_date" value="<%= item[0].e_start_date %>" class="form-control">
+			    </div>
+			</div>
+
+			<div class="form-group row">
+			    <label for="e_end_date" class="col-2 col-form-label">End Date</label>
+			    <div class="col-10">
+			        <input type="date" name="e_end_date" value="<%= item[0].e_end_date %>" class="form-control">
+			    </div>
+			</div>
+
+			<div class="form-group row">
+			    <label for="e_desce" class="col-2 col-form-label">Description</label>
+			    <div class="col-10">
+			        <textarea id="e_desc" name="e_desc" class="form-control"><%= item[0].e_desc %></textarea>
+			    </div>
+			</div>
+
+			<div class="form-group row">
+			    <label for="e_desce" class="col-2 col-form-label">Location</label>
+			    <div class="col-10">
+			        <textarea id="e_location" name="e_location" class="form-control"><%= item[0].e_location %></textarea>
+			    </div>
+			</div>
+
+			<div class="form-group row">
+			    <label for="e_location" class="col-2 col-form-label" style="color:#ffffff">Click Here To Submit</label>
+			    <div class="col-10">
+			        <input type="submit" name="submit" value="Save Event" class="btn btn-primary">
+			    </div>
+			</div>
+
+		</form>
+
+
+	</div>
+</div>
+
+
+<% include ../partials/footer %>
